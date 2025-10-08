@@ -2,7 +2,7 @@
 # REBEL HUMAN RIGHTS VIOLATIONS: DATA PREPARATION SCRIPT
 # ============================================================================
 
-# Load Required Packages -----------------------------------------------------
+# Load Required Packages 
 library(haven)
 library(dplyr)
 library(tidyverse)
@@ -83,7 +83,7 @@ nonstate_sel <- nonstate %>%
   )
 
 
-# Merge FORGE and Non-State Actor Data --------------------------------------
+# Merge FORGE and Non-State Actor Data 
 # Combine organizational characteristics with conflict dynamics
 forge_nonstate <- inner_join(
   forge_clean,
@@ -115,7 +115,7 @@ hr_final_clean <- hr_final_clean %>%
   dplyr::select(-dplyr::any_of(c("dyadid1.x", "dyadid1.y")))
 
 
-# Calculate Conflict Duration ------------------------------------------------
+# Calculate Conflict Duration
 # Convert dates to proper format
 hr_final_clean <- hr_final_clean %>%
   mutate(
@@ -166,7 +166,7 @@ hr_final_clean <- hr_final_clean %>%
 analysis_df <- hr_final_clean %>% filter(!is.na(duration_years_ongoing))
 
 
-# Standardize Country Names to ISO3 Codes ------------------------------------
+# Standardize Country Names to ISO3 Codes 
 humanrv_aug <- hr_final_clean %>%
   mutate(
     sidea_std = str_squish(sidea),
@@ -328,7 +328,7 @@ if (nrow(dupe_key) > 0) {
 }
 
 
-# Create Dependent Variables -------------------------------------------------
+# Create Dependent Variables 
 # Count total human rights violations
 full_model <- full_model %>%
   mutate(
