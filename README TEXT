@@ -1,0 +1,22 @@
+# Replication Files for [Rebel Groups and Human Rights Violations]
+
+## Overview
+This project replicates the analysis of [Rebel Groups and Human Rights Violations]. The analysis investigates how rebel origins shape HR abuses. 
+
+## Folder Structure
+- `datasets/`: Contains all raw data files and the merged datasets used in the analysis.
+- `do_files/`: Contains Stata Files that replicate the analysis. 
+
+## Data Source
+The datasets used in this project are sourced from [Forge Data, Human Rights Abuses Datasets, Non State Actors datasets
+
+## Analysis Process
+1. **Data Importation  
+2. **Descriptive Statistics
+3. **Regression Analysis**: 
+
+## How to Replicate
+To replicate the analysis, follow these steps:
+1. Run the do-files in order:
+    descriptive_statistics
+   regression_analysis
