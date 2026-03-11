@@ -31,7 +31,7 @@ Place the downloaded file in `data/raw/` before running the scripts.
 
 ## Replication Instructions
 1. Download V-Dem from the link above and place in `data/raw/`
-2. Run `New-script.R` to prepare data and run analysis
+2. Run `analysis.R` to prepare data and run analysis
 3. Output tables and figures will be generated in the `output/` directory
 
 ## Software
