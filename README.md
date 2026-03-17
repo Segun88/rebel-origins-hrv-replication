@@ -8,7 +8,7 @@ The project examines how the organizational origins of rebel groups shape their 
 
 ### Key Findings
 
-- **Organizational origins shape the composition of violations** — influencing which types of abuses groups commit rather than simply their overall frequency.
+- **Organizational origins shape the composition and pattern of violations** — influencing which types of abuses groups commit rather than simply their overall frequency.
 - **Civil society-origin groups** display distinctive selectivity in violence, engaging in fewer indiscriminate abuses compared to groups with militarized or violent origins.
 - **Groups without identifiable parent organizations** show substantially higher annual probabilities of ceasing abusive behavior (~15.3%) compared to violent-origin groups (~2.7%).
 - **Origins predict violation patterns** across multiple model specifications, analytic samples, and dependent variable operationalizations, suggesting robust relationships.
@@ -47,6 +47,7 @@ The V-Dem dataset (`V-Dem-CY-Core-v15.dta`, ~411MB) exceeds GitHub's file size l
 
 The analysis constructs mutually exclusive origin categories from FORGE parent-organization indicators and employs multiple empirical approaches:
 
+- **Negative Binomial models** for the count of violations(Total Violations)
 - **Fractional logit models** for compositional outcomes (discriminatory violence share)
 - **Binomial composition models** for the ratio of discriminatory to indiscriminate violations
 - **Negative binomial regression** for violation counts and variety measures
@@ -65,7 +66,7 @@ All models use **clustered standard errors** at the rebel group level to account
 
 ## Software Requirements
 
-Analysis conducted in **R** (version 4.3+). Required packages:
+Analysis conducted in **R** (version 4.5+). Required packages:
 
 ```r
 # Data management
@@ -86,15 +87,8 @@ install.packages(c("tidyverse", "haven", "janitor", "lubridate", "countrycode",
                    "modelsummary", "marginaleffects", "ggplot2"))
 ```
 
-## Citation
 
-If you use this data or code, please cite:
 
-```
-Somide, Olusegun Nicholas. 2026. "Rebel Groups' Foundation and Human Rights
-Violations: Why Do Some Rebel Groups Commit Human Rights Abuses More Intensively
-While Others Do Not?" Working Paper, University of Tennessee, Knoxville.
-```
 
 ## Contact
 
