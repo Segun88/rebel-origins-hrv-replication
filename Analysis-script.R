@@ -506,11 +506,6 @@ model_base <- model_base %>%
 
 
 
-
-
-
-
-
 ## Create Dependent Variables: Discriminatory vs. Indiscriminate Violence
 
 #Violation types are classified into two conceptual groups. 
@@ -676,25 +671,6 @@ model_base <- model_base %>%
   filter(year >= 1990, year <= 2018)
 
 
-
-
-
-
-#######################################################################
-
-# Step 2 — Then recode missing support
-model_base <- model_base %>%
-  mutate(
-    rebel_support_miss = as.integer(is.na(rebel_support_num)),
-    rebel_support_num  = replace_na(rebel_support_num, 0)
-  )
-
-# Step 3 — Verify
-sum(is.na(model_base$rebel_support_num))
-table(model_base$rebel_support_miss)
-
-
-############################################################################
 
 
 # Build Analytic Samples
